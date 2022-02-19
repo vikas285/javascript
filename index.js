@@ -1,16 +1,14 @@
 let screen = document.getElementById('screen');
-buttons = document.querySelectorAll ('button');
+let buttons = document.querySelectorAll ('button');
+console.log(buttons)
 let screenValue = " ";
 for (item of buttons){
     item.addEventListener('click', (e)=> {
-        buttonText = e.target.innerText;
+       let buttonText = e.target.innerText;
         console.log('Button text is', buttonText);
-        if ( buttonText=='*'){
-            screenValue += buttonText;
-            screen.value = screenValue;
-        }
-        else if ( buttonText=='C'){
-            screenValue =  "";
+        
+         if ( buttonText=='C'){
+            screenValue =  " ";
             screen.value= screenValue;
         }
         else if ( buttonText=='='){
